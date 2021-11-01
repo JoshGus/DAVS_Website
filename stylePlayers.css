@@ -302,6 +302,10 @@ footer{
   border-radius: 10px;
 }
 
+tr{
+  width: 100%;
+}
+
 .container_box{
   position: relative;
   align-items: center;
@@ -350,6 +354,17 @@ footer{
 th{
   color: white;
   font-size: 24px;
+  width: 21.5%;
+}
+
+td{
+  color: white;
+  font-size: 18px;
+  width: 21%;
+}
+
+thead{
+  width:100%;
 }
 
 
