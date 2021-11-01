@@ -309,7 +309,7 @@ tr{
 .container_box{
   position: relative;
   align-items: center;
-  width: 100%;
+  width: 80%;
   max-width: 900px;
 	height: auto;
   border: 3px solid rgb(56, 56, 56);
@@ -321,12 +321,10 @@ tr{
 }
 
 .contact {
-  font-color: black;
+  color: white;
 }
 
 
-@charset "utf-8";
-/* http://techneblog.com/article/creating-responsive-multiple-column-list */
 
 
 /*CSS3 multiple columns.*/
@@ -374,42 +372,40 @@ thead{
 
 
 
+/* Body
+1. Remove the margin in all browsers.
+2. As a best practice, apply a default `background-color`.
+3. Set an explicit initial text-align value so that we can later use
+the `inherit` value on things like `<th>` elements. */
 
 
-
-
-// Body
-//
-// 1. Remove the margin in all browsers.
-// 2. As a best practice, apply a default `background-color`.
-// 3. Set an explicit initial text-align value so that we can later use
-//    the `inherit` value on things like `<th>` elements.
 
 body {
-  margin: 0; // 1
+  margin: 0; 
   font-family: $font-family-base;
   @include font-size($font-size-base);
   font-weight: $font-weight-base;
   line-height: $line-height-base;
   color: $body-color;
-  text-align: left; // 3
-  background-color: $body-bg; // 2
+  text-align: left; 
+  background-color: $body-bg; 
 }
 
-// Suppress the focus outline on elements that cannot be accessed via keyboard.
-// This prevents an unwanted focus outline from appearing around elements that
-// might still respond to pointer events.
-//
-// Credit: https://github.com/suitcss/base
+/* Suppress the focus outline on elements that cannot be accessed via keyboard.
+This prevents an unwanted focus outline from appearing around elements that
+might still respond to pointer events.
+Credit: https://github.com/suitcss/base */
+
+
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
 
 
-// Content grouping
-//
-// 1. Add the correct box sizing in Firefox.
-// 2. Show the overflow in Edge and IE.
+/* Content grouping
+
+/* 1. Add the correct box sizing in Firefox. */
+/* 2. Show the overflow in Edge and IE. */ 
 
 hr {
   box-sizing: content-box; // 1
@@ -418,15 +414,14 @@ hr {
 }
 
 
-//
-// Typography
-//
+/* Typography */
 
-// Remove top margins from headings
-//
-// By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
-// margin for easier control within type scales as it avoids margin collapsing.
-// stylelint-disable-next-line selector-list-comma-newline-after
+/* Remove top margins from headings
+By default, `<h1>`-`<h6>` all receive top and bottom margins. We nuke the top
+margin for easier control within type scales as it avoids margin collapsing. */
+/* stylelint-disable-next-line selector-list-comma-newline-after */
+
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: $headings-margin-bottom;
@@ -517,18 +512,15 @@ sub { bottom: -.25em; }
 sup { top: -.5em; }
 
 
-//
-// Links
-//
-
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
-  background-color: transparent; // Remove the gray background on active links in IE 10.
-
+  color: rgb(219, 219, 219);
+  font-size: 17px;
+  text-decoration: none;
+  background-color: transparent; 
+  
   @include hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: white;
+    text-decoration: none;
   }
 }
 
@@ -575,19 +567,18 @@ pre {
 }
 
 
-//
-// Figures
-//
+
+ /* Figures */
+
 
 figure {
-  // Apply a consistent margin strategy (matches our type styles).
+  /* Apply a consistent margin strategy (matches our type styles). */
   margin: 0 0 1rem;
 }
 
 
-//
-// Images and content
-//
+/* Images and content */
+
 
 img {
   vertical-align: middle;
@@ -601,10 +592,7 @@ svg {
   vertical-align: middle;
 }
 
-
-//
-// Tables
-//
+/* Tables */
 
 table {
   border-collapse: collapse; // Prevent double borders
@@ -620,15 +608,12 @@ caption {
 }
 
 th {
-  // Matches default `<td>` alignment by inheriting from the `<body>`, or the
-  // closest parent with a set `text-align`.
+  /* Matches default `<td>` alignment by inheriting from the `<body>`, or the
+  closest parent with a set `text-align`. */
   text-align: inherit;
 }
 
-
-//
-// Forms
-//
+ /* Forms */
 
 label {
   // Allow labels to use `margin` for spacing.
