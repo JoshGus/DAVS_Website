@@ -15,6 +15,19 @@
   }
 }
 
+
+.tablecontainer {
+  height:100px;
+  overflow:auto;
+  min-height:500px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.tablecontainer::-webkit-scrollbar {
+    display: none;
+}
+
 .bg {
   background-image: linear-gradient(-70deg, rgb(0, 26, 255) 50%, rgb(12, 2, 99) 50%);animation:slide 9s ease-in-out infinite alternate;
   bottom:0;
@@ -51,7 +64,7 @@ h2 {
 
 h3 {
   margin: 12px;
-  color: azure;
+  color: white;
   font-family: "Noto Sans", 'Times New Roman', serif;
   font-size: 18px;
   padding: 15px;
@@ -296,7 +309,7 @@ footer{
   height: auto;
   border: 3px solid rgb(90, 90, 90);
   background-color: rgb(90, 90, 90);
-  padding: 15px;
+  padding: 15px 30px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -309,8 +322,8 @@ tr{
 .container_box{
   position: relative;
   align-items: center;
-  width: 80%;
-  max-width: 900px;
+  width: 90%;
+  max-width: 1200px;
 	height: auto;
   border: 3px solid rgb(56, 56, 56);
   background-color: rgb(56, 56, 56);
@@ -352,13 +365,13 @@ tr{
 th{
   color: white;
   font-size: 24px;
-  width: 21.5%;
+  width: 18%;
 }
 
 td{
   color: white;
   font-size: 18px;
-  width: 21%;
+  width: 17%;
 }
 
 thead{

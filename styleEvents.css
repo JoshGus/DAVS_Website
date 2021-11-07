@@ -9,6 +9,38 @@
   box-sizing: border-box;
 }
 
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.bg {
+  background-image: linear-gradient(-70deg, rgb(205, 210, 255) 50%, rgb(182, 177, 236) 50%);animation:slide 9s ease-in-out infinite alternate;
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:17s;
+}
+
+.bg3 {
+  animation-duration:13s;
+}
+
+
+
 /* The h and p section */
 
 h1 {
@@ -61,20 +93,29 @@ body {
 
 .content {
   height: calc(2 / 275vw);
-  background-image: 7;
-  background-color: #333;
-  background: -webkit-linear-gradient(-45deg, rgb(255, 255, 255), rgb(255, 255, 255));
-  background: linear-gradient(-45deg, rgb(255, 255, 255), rgb(255, 255, 255));
+  background-image: "images/GreyIsGood.jfif";
+
   background-blend-mode: multiply;
   background-size: cover;
   display: grid;
   font-family: "Noto Sans", 'Times New Roman', serif;
 }
 
+#content       
+{
+  font-size: 16px; /* 12/16 */
+  height: auto;
+  width:100%;
+  background-color: rgb(255, 255, 255);
+  margin: 60px auto 25px; /*auto centers the container */
+  padding: 3.84615384615385%; /* 25/650 */
+}
+
 /* navigation styles start here */
 
 header {
   background: var(--background);
+  background-color: rgb(36, 36, 36);
   text-align: center;
   position: fixed;
   z-index: 99;
@@ -139,7 +180,7 @@ nav {
   text-align: left;
   top: 100%;
   left: 0;
-  background: var(--background);
+  background-color: rgb(36, 36, 36);
   width: 100%;
   transform: scale(1, 0);
   transform-origin: top;
@@ -181,6 +222,7 @@ nav a:hover {
 .nav-toggle:checked ~ nav a {
   opacity: 1;
 }
+
 
 /* navigation styles start here */
 
@@ -255,15 +297,68 @@ nav a:hover {
 }
 
 
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.statcontainer {
+  height: auto;
+  width: 90%;
+  margin: 0px auto;
+  border-radius: 10px;
+  border: 3px solid rgb(53, 53, 53);
+  background-color:rgb(53, 53, 53);
+  text-align:center;
 }
-
-
-
 
 .contact {
   font-color: black;
+}
+
+
+.columns
+{   
+  height:auto;
+  width: auto;
+  justify-content:center;
+}
+
+@media only screen and (min-width: 1400px) {
+  .AwardListContainer {
+    width: 24%;
+    margin: 10px 0.3%;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px solid rgb(53, 53, 53);
+    background-image: linear-gradient(70deg, rgb(36, 36, 36) 50%, rgb(92, 92, 92) 50%);
+    display: inline-block;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1400px) {
+  .AwardListContainer {
+  width: 48%;
+  margin: 0.7%;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid rgb(53, 53, 53);
+  background: rgb(58, 58, 58);
+  background-image: linear-gradient(70deg, rgb(36, 36, 36) 50%, rgb(92, 92, 92) 50%);
+  display: inline-block;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .AwardListContainer {
+  width: 98%;
+  margin: 0.7%;
+  height: 200px;
+  border-radius: 10px;
+  border: 3px solid rgb(53, 53, 53);
+  background: rgb(58, 58, 58);
+  background-image: linear-gradient(70deg, rgb(36, 36, 36) 50%, rgb(92, 92, 92) 50%);
+  display: inline-block;
+  }
+}
+
+footer{
+  border-top: 2px black;
+  height: 300px;
+  background-image: linear-gradient(70deg, rgb(36, 36, 36) 50%, rgb(92, 92, 92) 50%);
 }
