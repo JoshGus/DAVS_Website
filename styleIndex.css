@@ -468,8 +468,8 @@ footer{
   .slide-content {
     width: 97%;
     margin: 10px auto;
-    height: 46vw;
-    min-height: 200px;
+    height: 50vw;
+    min-height: 225px;
     border-radius: 10px;
     border: 3px solid rgb(88, 88, 88);
     background-color: rgb(88, 88, 88);
